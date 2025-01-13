@@ -158,6 +158,8 @@
 | LinkedIn      | cabinet_social_LinkedIn      |
 | GitHub        | cabinet_social_GitHub        |
 
+Инструкции по получению API ключей для большинства провайдеров можно посмотреть [тут](https://docs.modx.pro/components/hybridauth/providers/).
+
 [![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/socials.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/socials.png)
 
 ### Безопасность
