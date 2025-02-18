@@ -427,6 +427,18 @@
 | user     | Ссылка на инстанс класса  modUser      |
 | tools    | Ссылка на инстанс класса  CabinetTools |
 
+#### Пример установки аватарки по умолчанию 
+
+```php
+switch ($modx->event->name) {
+case 'cabinetRemoveAvatar':
+  $avatar = '/assets/avatar.png';
+  $user->Profile->set('photo',$avatar);
+  $user->Profile->save();
+break;
+}
+```
+
 ## 💻 Разработка
 
 ### Лексиконы
