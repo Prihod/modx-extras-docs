@@ -1,6 +1,6 @@
-# Cabinet - Личный кабинет пользователя
+# Cabinet
 
-Комплексное решение для быстрого внедрения личного кабинета пользователя в MODX Revolution. Идеально подходит как для
+Cabinet - Комплексное решение для быстрого внедрения личного кабинета пользователя в MODX Revolution. Идеально подходит как для
 опытных разработчиков, так и для новичков.
 
 ## ✨ Основные возможности
@@ -24,12 +24,12 @@
 - Гибкое управление профилем пользователя
 - Защита от CSRF-атак
 - Интеграция с reCAPTCHA 3
+- Интеграция с Yandex SmartCaptcha
 - Bootstrap 5
 - Нативный JavaScript
 
 ## 🎬 Демонстрационное видео
-
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/video-cover.jpg)](https://youtu.be/I5pu-droYPM)
+[![Демонстрационное видео](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/video-cover.jpg)](https://youtu.be/I5pu-droYPM)
 
 ## 🚀 Быстрый старт
 
@@ -53,28 +53,27 @@
   * Шаблон
   * Содержимое
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/install.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/install.png)
+[![Настройка установки](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/install.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/install.png)
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/base.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/base.png)
+[![Основные опции](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/base.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/base.png)
 
 ### Регистрация и авторизация
 
 Для вывода ссылок регистрации/авторизации и меню кабинета используйте сниппет:
 
-```html
+```modx
 [[!cabinetLogin]]
 ```
 
 При использовании модального режима добавьте в футер каждой страницы:
 
-```html
+```modx
 [[!cabinetAuth]]
 ```
 
 #### Форма регистрации
 
-В зависимости от выбранного режима регистрации в чанке `cabinet.auth` у формы регистрации можно оставить минимальный
-набор полей:
+В зависимости от выбранного режима регистрации в чанке `cabinet.auth` у формы регистрации можно оставить минимальный набор полей:
 
 - Для режима `E-mail`: только поле электронной почты
 - Для режима `Телефон`: только поле телефона
@@ -87,7 +86,7 @@
 
 ### Авторизация
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/auth.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/auth.png)
+[![Опции авторизации](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/auth.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/auth.png)
 
 ### SMS/Voice OTP
 
@@ -124,7 +123,7 @@
 
 Возможно бесплатное добавление новых провайдеров при наличии PHP API библиотеки.
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/otp.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/otp.png)
+[![Опции OTP](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/otp.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/otp.png)
 
 ### Социальные сети
 
@@ -139,10 +138,8 @@
    Позволяет разрешить или запретить пользователям авторизоваться через социальные сети.
 
 3. **`Регистрировать новых пользователей через социальные сети` (ключ cabinet_social_signup):**
-
 - Разрешает или запрещает регистрацию новых пользователей через социальные сети.
-- Если регистрация отключена, но опция "Авторизация пользователей через социальные сети" включена, пользователи смогут
-  добавлять социальные сети для авторизации в настройках своего профиля.
+- Если регистрация отключена, но опция "Авторизация пользователей через социальные сети" включена, пользователи смогут добавлять социальные сети для авторизации в настройках своего профиля.
 
 4. **`Включить социальные сети` (ключ cabinet_enable_socials):**
    Позволяет глобально включать или отключать использование социальных сетей.
@@ -162,20 +159,25 @@
 | LinkedIn      | cabinet_social_LinkedIn      |
 | GitHub        | cabinet_social_GitHub        |
 
-Инструкции по получению API ключей для большинства провайдеров можно
-посмотреть [тут](https://docs.modx.pro/components/hybridauth/providers/).
+Инструкции по получению API ключей для большинства провайдеров можно посмотреть [тут](https://docs.modx.pro/components/hybridauth/providers/).
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/socials.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/socials.png)
+[![Опции социальных сетей](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/socials.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/socials.png)
 
 ### Безопасность
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/security.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/security.png)
+[![Опции безопасности](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/security.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/security.png)
 
 ### reCAPTCHA 3
 
 Интеграция с Google reCAPTCHA 3 для защиты от автоматизированных атак.
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/recaptcha.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/recaptcha.png)
+[![Опции reCAPTCHA 3](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/recaptcha.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/recaptcha.png)
+
+### Yandex SmartCaptcha
+
+Интеграция с Yandex SmartCaptcha для защиты от автоматизированных атак.
+
+[![Опции Yandex SmartCaptcha](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/ya_smart_captcha.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/ya_smart_captcha.png)
 
 ## 🧩 Сниппеты
 
@@ -189,7 +191,7 @@
 |---------------|------------------------------|-----------------------------------------------------------------------------------------------------------------|
 | cabinetPageId | 0                            | ID страницы кабинета. При 0 значении используется значение из системной опции `cabinet_home_page_id`            |
 | loginPageId   | 0                            | ID страницы после авторизации.  При 0 значении используется значение из системной опции `cabinet_login_page_id` |
-| logoutPageId  | 0                            | ID страницы после выхода.  При 0 значении используется значение из системной опции `cabinet_logout_page_id`     |
+| logoutPageId  | 0                            | ID страницы после выхода.  При 0 значении используется значение из системной опции `cabinet_logout_page_id`                                             |
 | tpl           | cabinet.login                | Чанк оформления                                                                                                 |
 | tplWrapper    | -                            | Чанк-обертка                                                                                                    |
 | gravatarUrl   | https://gravatar.com/avatar/ | URL сервиса Gravatar                                                                                            |
@@ -225,8 +227,7 @@
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | allowedFields     | username:50, email:50, fullname:50, phone:12, mobilephone:12, dob:10, gender, address, country, city, state, zip, fax, comment, specifiedpassword, confirmpassword | Список разрешенных для редактирования полей юзера, через запятую. Также можно указать максимальну. длину значений, через двоеточие. |
 | avatar            | {"w":200,"h":200,"zc":0,"bg":"ffffff","f":"jpg"}                                                                                                                   | JSON строка с параметрами конвертации аватара при помощи phpThumb                                                                   |
-| avatarPath        | {assets_path}images/avatar                                                                                                                                         | Директория для сохранения аватаров пользователей                                                                                    |
-| avatarUrl         | {assets_url}images/avatar                                                                                                                                          | Url к директории аватарок пользователей                                                                                             |
+| avatarPath        | images/avatar/                                                                                                                                                     | Директория для сохранения аватаров пользователей внутри MODX_ASSETS_PATH                                                            |
 | gravatarUrl       | https://gravatar.com/avatar/                                                                                                                                       | Gravatar Url                                                                                                                        |
 | requiredFields    | username,email                                                                                                                                                     | Список обязательных полей при редактировании. Эти поля должны быть заполнены для успешного обновления профиля.                      |
 | tpl               | cabinet.profile                                                                                                                                                    | Имя чанка для оформления результата работы сниппета                                                                                 |
@@ -239,7 +240,7 @@
 
 Сниппет для вывода списка заказов пользователя.
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/orders.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/orders.png)
+[![Вывода списка заказов](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/orders.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/orders.png)
 
 #### Параметры
 
@@ -270,7 +271,7 @@
 
 Сниппет для вывода детальной информации о заказе.
 
-[![](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/order_details.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/order_details.png)
+[![Вывод деталей заказа](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/order_details.png)](https://raw.githubusercontent.com/Prihod/modx-extras-docs/main/Cabinet/images/order_details.png)
 
 #### Параметры
 
@@ -313,6 +314,7 @@
 | tplMessageWrapper | cabinet.message.wrapper | Имя чанка-обертки для сообщений формы                                                                                                                                                       |
 | css               | -                       | Ссылка на подключаемый css файл стилей                                                                                                                                                      |
 | js                | -                       | Ссылка на подключаемый js скрипт                                                                                                                                                            |
+
 
 ## 📫 Системные события
 
@@ -426,18 +428,6 @@
 | userId   | ID пользователя                        |
 | user     | Ссылка на инстанс класса  modUser      |
 | tools    | Ссылка на инстанс класса  CabinetTools |
-
-#### Пример установки аватарки по умолчанию 
-
-```php
-switch ($modx->event->name) {
-case 'cabinetRemoveAvatar':
-  $avatar = '/assets/avatar.png';
-  $user->Profile->set('photo',$avatar);
-  $user->Profile->save();
-break;
-}
-```
 
 ## 💻 Разработка
 
