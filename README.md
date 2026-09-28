@@ -1,2 +1,3 @@
 - [MyFavorites](MyFavorites/MyFavorites.md) 
 - [Cabinet](Cabinet/Cabinet.md)
+- [ResVideoGallery](ResVideoGallery/ResVideoGallery.md)
